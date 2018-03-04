@@ -228,7 +228,7 @@ function pixgraphy_header_display() {
                     <a href="<?php echo esc_url(home_url('/')); ?>"
                        title="<?php echo esc_attr(get_bloginfo('name', 'display')); ?>"
                        rel="home"> <?php bloginfo('name'); ?> </a>
-                    <?php if (is_home() || is_front_page()){ ?></h1> <!-- end .site-title -->
+                <?php if (is_home() || is_front_page()){ ?></h1> <!-- end .site-title -->
         <?php } else { ?> </h2> <!-- end .site-title -->
         <?php }
         $site_description = get_bloginfo('description', 'display');
@@ -258,20 +258,27 @@ endif;
 function form_post() {
     echo '受取情報';
 
-    if(isset($_POST)){
-        $name = $_POST['name_'];
-        $date = $_POST['date'];
-        $class = $_POST['class'];
+    if (isset($_POST)) {
+        $name = "'" . $_POST['name_'] . "'";;
+        $date = "'" . $_POST['date'] . "'";
+        $class = "'" . $_POST['class'] . "'";
+        $place = "'" . $_POST['place'] . "'";
         $jpy = $_POST['jpy'];
         echo '<ul>';
 
-        echo '<li>'.$date.'</li>';
-        echo '<li>'.$name.'</li>';
-        echo '<li>'.$class.'</li>';
-        echo '<li>'.$jpy.'</li>';
+        echo '<li>' . $date . '</li>';
+        echo '<li>' . $name . '</li>';
+        echo '<li>' . $class . '</li>';
+        echo '<li>' . $jpy . '</li>';
 
-    echo '</ul>';
-  }
+        echo '</ul>';
+        //データが来てるか確認 空じゃなかったらSQL実行
+        if ($name !== "") {
+            global $wpdb;
+            $query_result = $wpdb->query("INSERT INTO `wp_wallet` VALUES(" . "DEFAULT" . "," . $date . "," . $name . "," . $place . "," . $class . "," . $jpy . ")");
+            echo "INSERT INTO `wp_wallet` VALUES(" . "DEFAULT" . "," . $name . "," . $date . "," . $place . "," . $class . "," . $jpy . ")";
+        }
+    }
 }
 
 add_shortcode('sc_form_post', 'form_post');
