@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: お小遣い管理システム出力専用
+Template Name: お小遣い管理システム出力専用！
 */
 
 
