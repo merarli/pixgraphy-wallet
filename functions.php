@@ -271,7 +271,7 @@ function form_post() {
         if ($name !== "''") {
             global $wpdb;
             $query_result = $wpdb->query("INSERT INTO `wp_wallet` VALUES(" . "DEFAULT" . "," . $date . "," . $name . "," . $place . "," . $class . "," . $jpy . ")");
-            echo "INSERT INTO `wp_wallet` VALUES(" . "DEFAULT" . "," . $name . "," . $date . "," . $place . "," . $class . "," . $jpy . ")";
+//            echo "INSERT INTO `wp_wallet` VALUES(" . "DEFAULT" . "," . $name . "," . $date . "," . $place . "," . $class . "," . $jpy . ")";
         }
     }
 }
