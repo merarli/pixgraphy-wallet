@@ -1,0 +1,53 @@
+<wpml-config>
+	<admin-texts>
+		<key name="pixgraphy_theme_options">
+			<key name="redirect_link1" />
+			<key name="redirect_link2" />
+			<key name="redirect_link3" />
+			<key name="redirect_link4" />
+			<key name="redirect_link5" />
+			<key name="redirect_link6" />
+			<key name="redirect_link7" />
+			<key name="redirect_link8" />
+			<key name="redirect_link9" />
+			<key name="redirect_link10" />
+			<key name="link_text1" />
+			<key name="link_text2" />
+			<key name="link_text3" />
+			<key name="link_text4" />
+			<key name="link_text5" />
+			<key name="link_text6" />
+			<key name="link_text7" />
+			<key name="link_text8" />
+			<key name="link_text9" />
+			<key name="link_text10" />
+			<key name="image_title1" />
+			<key name="image_title2" />
+			<key name="image_title3" />
+			<key name="image_title4" />
+			<key name="image_title5" />
+			<key name="image_title6" />
+			<key name="image_title7" />
+			<key name="image_title8" />
+			<key name="image_title9" />
+			<key name="image_title10" />
+			<key name="image_description1" />
+			<key name="image_description2" />
+			<key name="image_description3" />
+			<key name="image_description4" />
+			<key name="image_description5" />
+			<key name="image_description6" />
+			<key name="image_description7" />
+			<key name="image_description8" />
+			<key name="image_description9" />
+			<key name="image_description10" />
+			<key name="pixgraphy_search_text" />
+			<key name="pixgraphy_tag_text" />
+			<key name="pixgraphy-img-upload-footer-image" />
+			<key name="pixgraphy-footer-title" />
+			<key name="pixgraphy-footer-link" />
+			<key name="pixgraphy_tag_text" />
+			<key name="pixgraphy_tag_text" />
+		</key>
+	</admin-texts>
+</wpml-config>

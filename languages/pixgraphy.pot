@@ -1,0 +1,563 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: pixgraphy 1.0\n"
+"POT-Creation-Date: 2016-06-30 23:17+0545\n"
+"PO-Revision-Date: 2015-08-07 08:34+0545\n"
+"Last-Translator: \n"
+"Language-Team: ThemeFreesia <themefreesia@gmail.com>\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.7\n"
+"X-Poedit-Basepath: ..\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __e;__;esc_attr__;esc_attr_e;_x;_n;esc_html__;"
+"esc_html_e;_e\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: 404.php:31
+msgid "Oops! That page can&rsquo;t be found."
+msgstr ""
+
+#: 404.php:34
+msgid "It looks like nothing was found at this location. Maybe try a search?"
+msgstr ""
+
+#: comments.php:39
+msgid "Comments are closed."
+msgstr ""
+
+#: content.php:30 single.php:53
+msgid "No Comments"
+msgstr ""
+
+#: content.php:30 single.php:53
+msgid "1 Comment"
+msgstr ""
+
+#: content.php:30 single.php:53
+msgid "% Comments"
+msgstr ""
+
+#: content.php:30 content.php:118 single.php:53
+msgid "Comments Off"
+msgstr ""
+
+#: content.php:63 single.php:85
+msgid "Category : "
+msgstr ""
+
+#: content.php:65 single.php:87
+msgid ", "
+msgstr ""
+
+#: content.php:77
+msgid "Read More"
+msgstr ""
+
+#: content.php:118
+msgid "<i class=\"fa fa-comment\"></i>"
+msgstr ""
+
+#: content.php:118
+msgid "% <i class=\"fa fa-comment\"></i>"
+msgstr ""
+
+#: footer.php:55
+msgid "Go to Top"
+msgstr ""
+
+#: functions.php:53
+msgid "Main Menu"
+msgstr ""
+
+#: functions.php:132 functions.php:133
+msgid "Review Pixgraphy"
+msgstr ""
+
+#: functions.php:135 functions.php:136
+msgid "Theme Instructions"
+msgstr ""
+
+#: functions.php:138 functions.php:139
+msgid "Forum"
+msgstr ""
+
+#: functions.php:145
+msgid "About Pixgraphy"
+msgstr ""
+
+#: inc/customizer/functions/design-options.php:12
+msgid "Layout Options"
+msgstr ""
+
+#: inc/customizer/functions/design-options.php:23
+msgid "Responsive Layout"
+msgstr ""
+
+#: inc/customizer/functions/design-options.php:28
+#: inc/customizer/functions/design-options.php:44
+msgid "ON "
+msgstr ""
+
+#: inc/customizer/functions/design-options.php:29
+#: inc/customizer/functions/design-options.php:45
+msgid "OFF"
+msgstr ""
+
+#: inc/customizer/functions/design-options.php:39
+msgid "Animation Options"
+msgstr ""
+
+#: inc/customizer/functions/design-options.php:55
+#: inc/customizer/functions/design-options.php:60
+msgid "Photography Layout"
+msgstr ""
+
+#: inc/customizer/functions/design-options.php:61
+msgid "Blog large image display"
+msgstr ""
+
+#: inc/customizer/functions/design-options.php:62
+msgid "Blog medium image display"
+msgstr ""
+
+#: inc/customizer/functions/design-options.php:72
+msgid "Disable Entry Format from Blog Page"
+msgstr ""
+
+#: inc/customizer/functions/design-options.php:76
+msgid "Display Entry Format"
+msgstr ""
+
+#: inc/customizer/functions/design-options.php:77
+msgid "Hide Entry Format"
+msgstr ""
+
+#: inc/customizer/functions/design-options.php:78
+msgid "Show Button Only"
+msgstr ""
+
+#: inc/customizer/functions/design-options.php:79
+msgid "Hide Button Only"
+msgstr ""
+
+#: inc/customizer/functions/design-options.php:89
+msgid "Disable Entry Meta from Blog Page"
+msgstr ""
+
+#: inc/customizer/functions/design-options.php:93
+msgid "Display Entry Meta"
+msgstr ""
+
+#: inc/customizer/functions/design-options.php:94
+msgid "Hide Entry Meta"
+msgstr ""
+
+#: inc/customizer/functions/design-options.php:104
+msgid "Design Layout"
+msgstr ""
+
+#: inc/customizer/functions/design-options.php:109
+msgid "Full Width Layout"
+msgstr ""
+
+#: inc/customizer/functions/design-options.php:110
+msgid "Boxed Layout"
+msgstr ""
+
+#: inc/customizer/functions/design-options.php:111
+msgid "Small Boxed Layout"
+msgstr ""
+
+#: inc/customizer/functions/featured-content-customizer.php:12
+msgid "Slider Settings"
+msgstr ""
+
+#: inc/customizer/functions/featured-content-customizer.php:23
+msgid "Enable Slider"
+msgstr ""
+
+#: inc/customizer/functions/featured-content-customizer.php:28
+msgid "Front Page"
+msgstr ""
+
+#: inc/customizer/functions/featured-content-customizer.php:29
+msgid "Entire Site"
+msgstr ""
+
+#: inc/customizer/functions/featured-content-customizer.php:30
+msgid "Disable Slider"
+msgstr ""
+
+#: inc/customizer/functions/featured-content-customizer.php:34
+msgid "Display Page Slider"
+msgstr ""
+
+#: inc/customizer/functions/featured-content-customizer.php:47
+msgid " Page Slider #"
+msgstr ""
+
+#: inc/customizer/functions/register-panel.php:16
+msgid "Pixgraphy WordPress Settings"
+msgstr ""
+
+#: inc/customizer/functions/register-panel.php:26
+msgid "Pixgraphy Theme Options"
+msgstr ""
+
+#: inc/customizer/functions/register-panel.php:36
+msgid "Pixgraphy Slider Options"
+msgstr ""
+
+#: inc/customizer/functions/register-panel.php:46
+msgid "Pixgraphy Widgets"
+msgstr ""
+
+#: inc/customizer/functions/social-icons.php:12
+msgid "Social Icons"
+msgstr ""
+
+#: inc/customizer/functions/social-icons.php:25
+msgid "Facebook Link"
+msgstr ""
+
+#: inc/customizer/functions/social-icons.php:39
+msgid "Twitter Link"
+msgstr ""
+
+#: inc/customizer/functions/social-icons.php:53
+msgid "Pinterest Link"
+msgstr ""
+
+#: inc/customizer/functions/social-icons.php:67
+msgid "Dribbble Link"
+msgstr ""
+
+#: inc/customizer/functions/social-icons.php:81
+msgid "Instagram Link"
+msgstr ""
+
+#: inc/customizer/functions/social-icons.php:95
+msgid "Flickr Link"
+msgstr ""
+
+#: inc/customizer/functions/social-icons.php:109
+msgid "Google Plus Link"
+msgstr ""
+
+#: inc/customizer/functions/theme-options.php:12
+msgid "Site Title & Logo Options"
+msgstr ""
+
+#: inc/customizer/functions/theme-options.php:23
+msgid "Site Logo/ Text Options"
+msgstr ""
+
+#: inc/customizer/functions/theme-options.php:29
+msgid "Display Site Title Only"
+msgstr ""
+
+#: inc/customizer/functions/theme-options.php:30
+msgid "Display Site Logo Only"
+msgstr ""
+
+#: inc/customizer/functions/theme-options.php:31
+msgid "Show Both"
+msgstr ""
+
+#: inc/customizer/functions/theme-options.php:32
+msgid "Disable Both"
+msgstr ""
+
+#: inc/customizer/functions/theme-options.php:36
+msgid "Header Image"
+msgstr ""
+
+#: inc/customizer/functions/theme-options.php:41
+msgid "Pixgraphy Options"
+msgstr ""
+
+#: inc/customizer/functions/theme-options.php:52
+msgid "Disable Search Form"
+msgstr ""
+
+#: inc/customizer/functions/theme-options.php:63
+msgid "Disable Stick Menu"
+msgstr ""
+
+#: inc/customizer/functions/theme-options.php:74
+msgid "Disable Goto Top"
+msgstr ""
+
+#: inc/customizer/functions/theme-options.php:85
+msgid "Disable Top Social Icons"
+msgstr ""
+
+#: inc/customizer/functions/theme-options.php:96
+msgid "Disable Buttom Social Icons"
+msgstr ""
+
+#: inc/customizer/functions/theme-options.php:108
+msgid "Reset all default settings. (Refresh it to view the effect)"
+msgstr ""
+
+#: inc/customizer/functions/theme-options.php:113
+msgid "Enter your custom CSS"
+msgstr ""
+
+#: inc/customizer/functions/theme-options.php:124
+msgid "Custom CSS"
+msgstr ""
+
+#: inc/customizer/functions/theme-options.php:130
+#: inc/customizer/functions/theme-options.php:141
+msgid "Footer Background Image"
+msgstr ""
+
+#: inc/customizer/functions/theme-options.php:142
+msgid "Image will be displayed on footer"
+msgstr ""
+
+#: inc/customizer/functions/theme-options.php:154
+msgid "Footer Title"
+msgstr ""
+
+#: inc/customizer/functions/theme-options.php:165
+msgid "Footer Link"
+msgstr ""
+
+#: inc/customizer/functions/theme-options.php:171
+msgid "Colors"
+msgstr ""
+
+#: inc/customizer/functions/theme-options.php:176
+msgid "Background Image"
+msgstr ""
+
+#: inc/customizer/functions/theme-options.php:181
+msgid "Navigation"
+msgstr ""
+
+#: inc/customizer/functions/theme-options.php:186
+msgid "Static Front Page"
+msgstr ""
+
+#: inc/footer-details.php:17
+msgid "Designed by:"
+msgstr ""
+
+#: inc/footer-details.php:17
+msgid "Theme Freesia"
+msgstr ""
+
+#: inc/footer-details.php:18
+msgid "Powered by:"
+msgstr ""
+
+#: inc/footer-details.php:18
+msgid "WordPress"
+msgstr ""
+
+#: inc/settings/pixgraphy-common-functions.php:15
+msgid "Comment navigation"
+msgstr ""
+
+#: inc/settings/pixgraphy-common-functions.php:18
+msgid "Older Comments"
+msgstr ""
+
+#: inc/settings/pixgraphy-common-functions.php:21
+msgid "Newer Comments"
+msgstr ""
+
+#: inc/settings/pixgraphy-common-functions.php:89
+#, php-format
+msgid "Author: %s"
+msgstr ""
+
+#: inc/settings/pixgraphy-common-functions.php:92
+#, php-format
+msgid "Day: %s"
+msgstr ""
+
+#: inc/settings/pixgraphy-common-functions.php:94
+#, php-format
+msgid "Month: %s"
+msgstr ""
+
+#: inc/settings/pixgraphy-common-functions.php:96
+#, php-format
+msgid "Year: %s"
+msgstr ""
+
+#: inc/settings/pixgraphy-common-functions.php:98
+msgid "Audios"
+msgstr ""
+
+#: inc/settings/pixgraphy-common-functions.php:100
+msgid "Asides"
+msgstr ""
+
+#: inc/settings/pixgraphy-common-functions.php:102
+msgid "Images"
+msgstr ""
+
+#: inc/settings/pixgraphy-common-functions.php:104
+msgid "Galleries"
+msgstr ""
+
+#: inc/settings/pixgraphy-common-functions.php:106
+msgid "Videos"
+msgstr ""
+
+#: inc/settings/pixgraphy-common-functions.php:108
+msgid "Status"
+msgstr ""
+
+#: inc/settings/pixgraphy-common-functions.php:110
+msgid "Quotes"
+msgstr ""
+
+#: inc/settings/pixgraphy-common-functions.php:112
+msgid "links"
+msgstr ""
+
+#: inc/settings/pixgraphy-common-functions.php:114
+msgid "Chats"
+msgstr ""
+
+#: inc/settings/pixgraphy-common-functions.php:120
+msgid "Archives"
+msgstr ""
+
+#: inc/settings/pixgraphy-common-functions.php:125
+msgid "Page NOT Found"
+msgstr ""
+
+#: inc/settings/pixgraphy-common-functions.php:127
+msgid "Search Results"
+msgstr ""
+
+#: inc/settings/pixgraphy-functions.php:84
+msgid "Upgrade to Pro"
+msgstr ""
+
+#: inc/widgets/widgets-functions/contactus-widgets.php:11
+msgid "Display Contact Us Information"
+msgstr ""
+
+#: inc/widgets/widgets-functions/contactus-widgets.php:13
+msgid "TF: Contact Us"
+msgstr ""
+
+#: inc/widgets/widgets-functions/contactus-widgets.php:26
+msgid "Contact Title:"
+msgstr ""
+
+#: inc/widgets/widgets-functions/contactus-widgets.php:32
+msgid "Address:"
+msgstr ""
+
+#: inc/widgets/widgets-functions/contactus-widgets.php:38
+msgid "Address Link:"
+msgstr ""
+
+#: inc/widgets/widgets-functions/contactus-widgets.php:44
+msgid "Phone No 1:"
+msgstr ""
+
+#: inc/widgets/widgets-functions/contactus-widgets.php:50
+msgid "Phone No 2:"
+msgstr ""
+
+#: inc/widgets/widgets-functions/contactus-widgets.php:56
+msgid "Skype ID:"
+msgstr ""
+
+#: inc/widgets/widgets-functions/contactus-widgets.php:62
+msgid "Email ID:"
+msgstr ""
+
+#: inc/widgets/widgets-functions/register-widgets.php:14
+msgid "Main Sidebar"
+msgstr ""
+
+#: inc/widgets/widgets-functions/register-widgets.php:16
+msgid "Shows widgets at Main Sidebar."
+msgstr ""
+
+#: inc/widgets/widgets-functions/register-widgets.php:23
+msgid "Display Contact Info at Header "
+msgstr ""
+
+#: inc/widgets/widgets-functions/register-widgets.php:25
+msgid "Shows widgets on all page."
+msgstr ""
+
+#: inc/widgets/widgets-functions/register-widgets.php:30
+msgid "Contact Page Sidebar"
+msgstr ""
+
+#: inc/widgets/widgets-functions/register-widgets.php:32
+msgid "Shows widgets on Contact Page Template."
+msgstr ""
+
+#: inc/widgets/widgets-functions/register-widgets.php:39
+msgid "Shortcode For Contact Page"
+msgstr ""
+
+#: inc/widgets/widgets-functions/register-widgets.php:41
+msgid ""
+"Add Contact Form 7 Shortcode using text widgets Ex: [contact-form-7 id="
+"\"137\" title=\"Contact form 1\"]"
+msgstr ""
+
+#: inc/widgets/widgets-functions/register-widgets.php:48
+msgid "WooCommerce Sidebar"
+msgstr ""
+
+#: inc/widgets/widgets-functions/register-widgets.php:50
+msgid "Add WooCommerce Widgets Only"
+msgstr ""
+
+#: index.php:36 page-templates/contact-template.php:51
+#: page-templates/gallery-template.php:52 page.php:52 search.php:44
+#: single.php:113
+msgid "No Posts Found."
+msgstr ""
+
+#: page-templates/gallery-template.php:39 page.php:39 single.php:72
+msgid "Pages:"
+msgstr ""
+
+#: pagination.php:19
+msgid "&laquo; Previous Page"
+msgstr ""
+
+#: pagination.php:22
+msgid "Next Page &raquo;"
+msgstr ""
+
+#: searchform.php:18
+msgid "Search &hellip;"
+msgstr ""
+
+#: single.php:98
+msgid "&larr; Previous"
+msgstr ""
+
+#: single.php:99
+msgid "Next &rarr;"
+msgstr ""
+
+#: single.php:103
+msgid "&larr;"
+msgstr ""
+
+#: single.php:104
+msgid "&rarr;"
+msgstr ""
