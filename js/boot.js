@@ -270,8 +270,8 @@ formAction.datePicker = function(){
   if (Modernizr.inputtypes.date) {
     
     $("#datepicker")
-      .attr("value", moveDate())
-      .attr("min",   moveDate(min))
+      .attr("value", moveDate(min))
+      .attr("min",   moveDate())
       .attr("max",   moveDate(max));
 
   } else{
@@ -287,7 +287,7 @@ formAction.datePicker = function(){
       $("#datepicker").datepicker({
         "dateFormat": "YYYY-MM-DD", // YYYY-MM-DD
         "defaultDate": min,
-        "minDate": min, 
+        "minDate": min,
         "maxDate": max,
         "firstDay": 1 // 月曜始まり
       });
