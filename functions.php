@@ -256,7 +256,7 @@ endif;
 
 //					フォームから受取
 function form_post() {
-    echo '受取情報';
+
 
     if (isset($_POST)) {
         $name = "'" . $_POST['name_'] . "'";;
@@ -264,16 +264,11 @@ function form_post() {
         $class = "'" . $_POST['class'] . "'";
         $place = "'" . $_POST['place'] . "'";
         $jpy = $_POST['jpy'];
-        echo '<ul>';
 
-        echo '<li>' . $date . '</li>';
-        echo '<li>' . $name . '</li>';
-        echo '<li>' . $class . '</li>';
-        echo '<li>' . $jpy . '</li>';
 
-        echo '</ul>';
         //データが来てるか確認 空じゃなかったらSQL実行
-        if ($name !== "") {
+
+        if ($name !== "''") {
             global $wpdb;
             $query_result = $wpdb->query("INSERT INTO `wp_wallet` VALUES(" . "DEFAULT" . "," . $date . "," . $name . "," . $place . "," . $class . "," . $jpy . ")");
             echo "INSERT INTO `wp_wallet` VALUES(" . "DEFAULT" . "," . $name . "," . $date . "," . $place . "," . $class . "," . $jpy . ")";
@@ -282,3 +277,32 @@ function form_post() {
 }
 
 add_shortcode('sc_form_post', 'form_post');
+
+//お小遣いテーブル表示
+function getTable() {
+    $tmp = "";
+    global $wpdb;
+    $results = $wpdb->get_results("SELECT DISTINCT * FROM wp_wallet");
+
+    $tmp .= '<table class="type07 list-size tablesorter">';
+    $tmp .= '<thead><tr><th>id</th><th>日付</th><th>品名</th><th>場所</th><th>分類</th><th>円</th></tr></thead>';
+    $tmp .= '<tbody>';
+    for ($i = 0; $i < count($results); $i++) {
+        $tmp .= '<tr>';
+
+        $tmp .= '<td>' . $results[$i]->id . '</td>';
+        $tmp .= '<td>' . $results[$i]->date . '</td>';
+        $tmp .= '<td>' . $results[$i]->name . '</td>';
+        $tmp .= '<td>' . $results[$i]->place . '</td>';
+        $tmp .= '<td>' . $results[$i]->class . '</td>';
+        $tmp .= '<td>' . $results[$i]->jpy . '</td>';
+
+
+        $tmp .= '</tr>';
+    }
+    $tmp .= '</tbody>';
+    $tmp .= '</table>';
+    return $tmp;
+}
+
+add_shortcode('sc_getTable', 'getTable');
