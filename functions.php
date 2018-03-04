@@ -271,7 +271,7 @@ function form_post() {
         if ($name !== "''") {
             global $wpdb;
             $query_result = $wpdb->query("INSERT INTO `wp_wallet` VALUES(" . "DEFAULT" . "," . $date . "," . $name . "," . $class . "," . $place . "," . $jpy . ")");
-//            echo "INSERT INTO `wp_wallet` VALUES(" . "DEFAULT" . "," . $name . "," . $date . "," . $place . "," . $class . "," . $jpy . ")";
+            //            echo "INSERT INTO `wp_wallet` VALUES(" . "DEFAULT" . "," . $name . "," . $date . "," . $place . "," . $class . "," . $jpy . ")";
         }
     }
 }
@@ -306,3 +306,19 @@ function getTable() {
 }
 
 add_shortcode('sc_getTable', 'getTable');
+
+//今月の使用額表示
+function useJpy() {
+    $today = date("Y-m");
+    print $today;
+    $sum_ = "";
+    global $wpdb;
+    $results = $wpdb->get_results("SELECT sum(jpy) as gokei FROM wp_wallet WHERE date LIKE '%". $today ."%'");
+    for ($i = 0; $i < count($results); $i++) {
+        $sum_ = $results[$i]->gokei;
+    }
+    return "今月の出費:" . $sum_ . "円";
+
+}
+
+add_shortcode('sc_useJpy', 'useJpy');
