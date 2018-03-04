@@ -261,8 +261,8 @@ formAction.kanjiConverter = function(){
 // カレンダー呼び出し
 formAction.datePicker = function(){
   
-  var min = 2;  // 最短配達可能日（今日 + min）
-  var max = 30; // 最長配達可能日（今日 + max）
+  var min = -365;  // 最短配達可能日（今日 + min）
+  var max = 365; // 最長配達可能日（今日 + max）
 
   // <input type="date">をサポートしていれば、ネイティブ機能を利用
   // 未サポートであればフォールバックとしてjQuery UI DatePickerを利用 
@@ -285,7 +285,7 @@ formAction.datePicker = function(){
       // 読み込み完了したらdatepickerを起動
       $.datepicker.setDefaults($.datepicker.regional["ja"]);
       $("#datepicker").datepicker({
-        "dateFormat": "yy-mm-dd", // YYYY-MM-DD
+        "dateFormat": "YYYY-MM-DD", // YYYY-MM-DD
         "defaultDate": min,
         "minDate": min, 
         "maxDate": max,

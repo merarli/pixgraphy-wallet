@@ -80,9 +80,14 @@ if(($pixgraphy_settings['pixgraphy_sidebar_layout_options'] != 'nosidebar') && (
                         </div> <!-- .entry-content -->
 
                         <!--            フォーム-->
-                        こんにちは
+                        <p>ここから</p>
 
+                        <?php
+                        $date = $_GET[‘name_’];
+                         echo $date;
+                        ?>
 
+                        <p>ここまで</p>
 
 
                         <?php $disable_entry_format = $pixgraphy_settings['pixgraphy_entry_format_blog'];
@@ -133,7 +138,7 @@ if(($pixgraphy_settings['pixgraphy_sidebar_layout_options'] != 'nosidebar') && (
         echo '</div><!-- #primary -->';
     }
 }
-get_sidebar();
+//get_sidebar();
 get_footer();
 
 ?>
