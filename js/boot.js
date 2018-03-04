@@ -261,7 +261,7 @@ formAction.kanjiConverter = function(){
 // カレンダー呼び出し
 formAction.datePicker = function(){
   
-  var min = 365;  // 最短配達可能日（今日 + min）
+  var min = -365;  // 最短配達可能日（今日 + min）
   var max = 365; // 最長配達可能日（今日 + max）
 
   // <input type="date">をサポートしていれば、ネイティブ機能を利用
@@ -270,7 +270,7 @@ formAction.datePicker = function(){
   if (Modernizr.inputtypes.date) {
     
     $("#datepicker")
-      .attr("value", moveDate(min))
+      .attr("value", moveDate())
       .attr("min",   moveDate(min))
       .attr("max",   moveDate(max));
 
