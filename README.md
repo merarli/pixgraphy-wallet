@@ -1,0 +1,1 @@
+# pixgraphy-walletはWordPressにお小遣い管理システムを加えたものです
