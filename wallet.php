@@ -79,16 +79,6 @@ if(($pixgraphy_settings['pixgraphy_sidebar_layout_options'] != 'nosidebar') && (
                             ) ); ?>
                         </div> <!-- .entry-content -->
 
-                        <!--            フォーム-->
-                        <p>ここから</p>
-
-                        <?php
-                        $date = $_GET[‘name_’];
-                         echo $date;
-                        ?>
-
-                        <p>ここまで</p>
-
 
                         <?php $disable_entry_format = $pixgraphy_settings['pixgraphy_entry_format_blog'];
                         if($disable_entry_format =='show' || $disable_entry_format =='show-button' || $disable_entry_format =='hide-button'){ ?>
