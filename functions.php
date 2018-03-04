@@ -282,7 +282,7 @@ add_shortcode('sc_form_post', 'form_post');
 function getTable() {
     $tmp = "";
     global $wpdb;
-    $results = $wpdb->get_results("SELECT DISTINCT * FROM wp_wallet");
+    $results = $wpdb->get_results("SELECT DISTINCT * FROM wp_wallet ORDER BY date ASC");
 
     $tmp .= '<table class="type07 list-size tablesorter">';
     $tmp .= '<thead><tr><th>id</th><th>日付</th><th>品名</th><th>場所</th><th>分類</th><th>円</th></tr></thead>';
