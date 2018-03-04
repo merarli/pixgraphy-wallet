@@ -270,7 +270,7 @@ formAction.datePicker = function(){
   if (Modernizr.inputtypes.date) {
     
     $("#datepicker")
-      .attr("value", moveDate(min))
+      .attr("value", moveDate())
       .attr("min",   moveDate())
       .attr("max",   moveDate(max));
 
