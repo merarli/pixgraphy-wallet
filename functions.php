@@ -284,8 +284,8 @@ function getTable() {
     global $wpdb;
     $results = $wpdb->get_results("SELECT DISTINCT * FROM wp_wallet ORDER BY date ASC");
 
-    $tmp .= '<table class="type07 list-size tablesorter">';
-    $tmp .= '<thead><tr><th>id</th><th>日付</th><th>品名</th><th>場所</th><th>分類</th><th>円</th></tr></thead>';
+    $tmp .= '<table id="grid-basic" class="table table-condensed table-hover table-striped">';
+    $tmp .= '<thead><tr><th data-column-id="1">id</th><th data-column-id="2">日付</th><th data-column-id="3">品名</th><th data-column-id="4">場所</th><th data-column-id="5">分類</th><th data-column-id="6">円</th></tr></thead>';
     $tmp .= '<tbody>';
     for ($i = 0; $i < count($results); $i++) {
         $tmp .= '<tr>';
@@ -322,3 +322,32 @@ function useJpy() {
 }
 
 add_shortcode('sc_useJpy', 'useJpy');
+
+//お小遣いテーブル表示
+function getTableLimit() {
+    $tmp = "";
+    global $wpdb;
+    $results = $wpdb->get_results("SELECT DISTINCT * FROM wp_wallet ORDER BY date ASC LIMIT 5");
+
+    $tmp .= '<table id="grid-basic" class="table table-condensed table-hover table-striped">';
+    $tmp .= '<thead><tr><th data-column-id="1">id</th><th data-column-id="2">日付</th><th data-column-id="3">品名</th><th data-column-id="4">場所</th><th data-column-id="5">分類</th><th data-column-id="6">円</th></tr></thead>';
+    $tmp .= '<tbody>';
+    for ($i = 0; $i < count($results); $i++) {
+        $tmp .= '<tr>';
+
+        $tmp .= '<td>' . $results[$i]->id . '</td>';
+        $tmp .= '<td>' . $results[$i]->date . '</td>';
+        $tmp .= '<td>' . $results[$i]->name . '</td>';
+        $tmp .= '<td>' . $results[$i]->place . '</td>';
+        $tmp .= '<td>' . $results[$i]->class . '</td>';
+        $tmp .= '<td>' . $results[$i]->jpy . '</td>';
+
+
+        $tmp .= '</tr>';
+    }
+    $tmp .= '</tbody>';
+    $tmp .= '</table>';
+    return $tmp;
+}
+
+add_shortcode('sc_getTableLimit', 'getTableLimit');

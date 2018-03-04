@@ -76,6 +76,9 @@ if(class_exists('Pixgraphy_Plus_Features')){
 	<?php endif; ?>
 </footer> <!-- end #colophon -->
 </div> <!-- end #page -->
+
+
+
 <?php wp_footer(); ?>
 </body>
 </html>

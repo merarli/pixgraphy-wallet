@@ -13,6 +13,9 @@
 $pixgraphy_settings = pixgraphy_get_theme_options(); ?>
 <head>
 <!--add-->
+
+
+
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.7.1/modernizr.min.js"></script>
 <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
@@ -20,6 +23,12 @@ $pixgraphy_settings = pixgraphy_get_theme_options(); ?>
 <script src="<?php bloginfo('template_directory'); ?>/js/ajaxzip2.js"></script>
 <script src="<?php bloginfo('template_directory'); ?>/js/jquery.payment.js"></script>
 <script src="<?php bloginfo('template_directory'); ?>/js/boot.js"></script>
+
+
+<!--<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.js"></script>-->
+<!--<script src="--><?php //bloginfo('template_directory'); ?><!--/js/bootstrap.js"></script>-->
+<!--<script src="--><?php //bloginfo('template_directory'); ?><!--/js/jquery.bootgrid.js"></script>-->
+
 <!--add-->
 <meta charset="<?php bloginfo( 'charset' ); ?>" />
 <link rel="profile" href="http://gmpg.org/xfn/11" />

@@ -270,7 +270,7 @@ formAction.datePicker = function(){
   if (Modernizr.inputtypes.date) {
     
     $("#datepicker")
-      .attr("value", moveDate())
+      .attr("value", moveDate(0))
       .attr("min",   moveDate())
       .attr("max",   moveDate(max));
 
@@ -338,3 +338,4 @@ $.getScript = function(url, fn){
     fn && fn();
   });
 };
+
