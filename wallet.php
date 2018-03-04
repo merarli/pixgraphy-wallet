@@ -23,6 +23,8 @@ if(($pixgraphy_settings['pixgraphy_sidebar_layout_options'] != 'nosidebar') && (
         <?php }
         }?>
         <main id="main" class="site-main clearfix">
+
+
             <?php global $pixgraphy_settings;
             if( have_posts() ) {
                 while( have_posts() ) {
@@ -76,6 +78,13 @@ if(($pixgraphy_settings['pixgraphy_sidebar_layout_options'] != 'nosidebar') && (
                                 'echo'			=> 1
                             ) ); ?>
                         </div> <!-- .entry-content -->
+
+                        <!--            フォーム-->
+                        こんにちは
+
+
+
+
                         <?php $disable_entry_format = $pixgraphy_settings['pixgraphy_entry_format_blog'];
                         if($disable_entry_format =='show' || $disable_entry_format =='show-button' || $disable_entry_format =='hide-button'){ ?>
                             <footer class="entry-footer">
@@ -115,6 +124,8 @@ if(($pixgraphy_settings['pixgraphy_sidebar_layout_options'] != 'nosidebar') && (
         <?php
         if( 'default' == $layout ) { //Settings from customizer
         if(($pixgraphy_settings['pixgraphy_sidebar_layout_options'] != 'nosidebar') && ($pixgraphy_settings['pixgraphy_sidebar_layout_options'] != 'fullwidth')): ?>
+
+
     </div> <!-- #primary -->
 <?php endif;
 }else{ // for page/post
