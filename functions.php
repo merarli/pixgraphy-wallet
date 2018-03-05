@@ -318,10 +318,30 @@ function useJpy() {
         $sum_ = $results[$i]->gokei;
     }
     return "今月の出費:" . $sum_ . "円";
-
 }
-
 add_shortcode('sc_useJpy', 'useJpy');
+
+//今月の平均食費(日)表示
+function getAvgEat(){
+    $today = date("Y-m");
+    $avg = "";
+    global $wpdb;
+    $results = $wpdb->get_results("SELECT SUM(jpy) as avg FROM wp_wallet WHERE `class` = '食費' AND `date`  LIKE '%". $today ."%'");
+    for ($i = 0; $i < count($results); $i++) {
+        $avg = $results[$i]->avg;
+    }
+
+
+    //今月の食費を今までの日にちで割る
+    $today2 = date("d");
+    $today2 = (int)($today2);
+    $avg = $avg / $today2;
+
+    return "今月の平均食費/日:" . $avg . "円<br>予想食費/月:" . $avg * 30 . "円";
+}
+add_shortcode('sc_getAvgEat', 'getAvgEat');
+
+
 
 //お小遣いテーブル表示
 function getTableLimit() {
