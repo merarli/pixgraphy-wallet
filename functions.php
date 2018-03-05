@@ -327,7 +327,7 @@ add_shortcode('sc_useJpy', 'useJpy');
 function getTableLimit() {
     $tmp = "";
     global $wpdb;
-    $results = $wpdb->get_results("SELECT * FROM wp_wallet ORDER BY `date` DESC LIMIT 3");
+    $results = $wpdb->get_results("SELECT * FROM wp_wallet ORDER BY `id` DESC LIMIT 3");
 
     $tmp .= '<table id="grid-basic" class="table table-condensed table-hover table-striped">';
     $tmp .= '<thead><tr><th data-column-id="1">id</th><th data-column-id="2">日付</th><th data-column-id="3">品名</th><th data-column-id="4">場所</th><th data-column-id="5">分類</th><th data-column-id="6">円</th></tr></thead>';
