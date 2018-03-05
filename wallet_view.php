@@ -31,9 +31,9 @@ $pixgraphy_settings = pixgraphy_get_theme_options(); ?>
     <script src="<?php bloginfo('template_directory'); ?>/js/boot.js"></script>
 
 
-    <!--<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.js"></script>-->
-    <!--<script src="--><?php //bloginfo('template_directory'); ?><!--/js/bootstrap.js"></script>-->
-    <!--<script src="--><?php //bloginfo('template_directory'); ?><!--/js/jquery.bootgrid.js"></script>-->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.js"></script>
+    <script src="<?php bloginfo('template_directory'); ?>/js/bootstrap.js"></script>
+    <script src="<?php bloginfo('template_directory'); ?>/js/jquery.bootgrid.js"></script>
 
     <!--add-->
     <meta charset="<?php bloginfo('charset'); ?>"/>
