@@ -337,7 +337,7 @@ function getAvgEat(){
     $today2 = (int)($today2);
     $avg = $avg / $today2;
 
-    return "今月の平均食費/日:" . $avg . "円<br>予想食費/月:" . $avg * 30 . "円";
+    return "今月の平均食費/日:" . $avg . "円<br>今月の予想食費/月:" . $avg * 30 . "円";
 }
 add_shortcode('sc_getAvgEat', 'getAvgEat');
 
