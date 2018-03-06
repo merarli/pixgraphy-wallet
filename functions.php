@@ -309,7 +309,7 @@ add_shortcode('sc_getTable', 'getTable');
 
 //今月の使用額表示
 function useJpy() {
-    $today = date_i18n("Y-m");
+    $today = current_time('Y-m');
     print $today;
     $sum_ = "";
     global $wpdb;
@@ -324,7 +324,7 @@ add_shortcode('sc_useJpy', 'useJpy');
 
 //今月の平均食費(日)表示
 function getAvgEat() {
-    $today = date_i18n("Y-m");
+    $today = current_time('Y-m');
     $avg = "";
     global $wpdb;
     $results = $wpdb->get_results("SELECT SUM(jpy) as avg FROM wp_wallet WHERE `class` = '食費' AND `date`  LIKE '%" . $today . "%'");
@@ -334,11 +334,11 @@ function getAvgEat() {
 
 
     //今月の食費を今までの日にちで割る
-    $today2 = date("d");
+    $today2 = current_time("d");
     $today2 = (int)($today2);
     $avg = $avg / $today2;
 
-    return "今月の平均食費/日:" . $avg . "円<br>今月の予想食費/月:" . $avg * 30 . "円";
+    return "今月の平均食費/日:" . (int)$avg . "円<br>今月の予想食費/月:" . (int)$avg * 30 . "円";
 }
 
 add_shortcode('sc_getAvgEat', 'getAvgEat');
@@ -377,7 +377,7 @@ function classSum() {
     //チャートで使う色を配列に格納
     $color=array('#de9610','#c93a40','#fff001','#d06d8c','#65ace4','#a0c238','#56a764','#d16b16','#cc528b','#9460a0','#f2cf01','#0074bf','#e2b2c0','#fff353','#a5d1f4','#e4ad6d');
     //今日の日付を取得 例:(2018-03)
-    $today = date_i18n("Y-m");
+    $today = current_time('Y-m');
     $tmp = "";
     //SQL文発行
     global $wpdb;
