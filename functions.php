@@ -374,18 +374,21 @@ function getTableLimit() {
 add_shortcode('sc_getTableLimit', 'getTableLimit');
 
 function classSum() {
+    //チャートで使う色を配列に格納
     $color=array('#de9610','#c93a40','#fff001','#d06d8c','#65ace4','#a0c238','#56a764','#d16b16','#cc528b','#9460a0','#f2cf01','#0074bf','#e2b2c0','#fff353','#a5d1f4','#e4ad6d');
+    //今日の日付を取得 例:(2018-03)
     $today = date_i18n("Y-m");
     $tmp = "";
+    //SQL文発行
     global $wpdb;
     $results = $wpdb->get_results("SELECT class,sum(jpy) AS gokei FROM wp_wallet  WHERE `date` LIKE '%" . $today . "%' GROUP BY class");
-//    print "SELECT class,sum(jpy) AS gokei FROM `wp_wallet` GROUP BY class WHERE `date` LIKE '%" . $today . "%'";
 
+    //jsを$tmpに格納
     $tmp .= 'var data = [';
     $tmp .= "\n";
 
+    //SQL結果を出力しながら$tmpにjsを格納
     for ($i = 0; $i < count($results); $i++) {
-//        $tmp .= $results[$i]->gokei;
         $tmp .= '{';
         $tmp .= "\n";
         $tmp .= 'value: ' . $results[$i]->gokei . ',';
@@ -398,17 +401,14 @@ function classSum() {
         $tmp .= "\n";
         $tmp .= '},';
     }
+    //後ろから一文字消す
     $tmp = substr($tmp,0, -1);
 
     $tmp .= "\n";
-
     $tmp .= '];';
     $tmp .= "\n";
     $tmp .= 'var myChart = new Chart(document.getElementById("mycanvas").getContext("2d")).Doughnut(data);';
 
-//    後ろから一文字消す
-
+    //最終的にjsをプリント
     print $tmp;
-//    return;
-
 }
