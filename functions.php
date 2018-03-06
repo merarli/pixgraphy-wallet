@@ -374,7 +374,7 @@ function getTableLimit() {
 add_shortcode('sc_getTableLimit', 'getTableLimit');
 
 function classSum() {
-    $color=array('red','blue','pink','green','black');
+    $color=array('#de9610','#c93a40','#fff001','#d06d8c','#65ace4','#a0c238','#56a764','#d16b16','#cc528b','#9460a0','#f2cf01','#0074bf','#e2b2c0','#fff353','#a5d1f4','#e4ad6d');
     $today = date_i18n("Y-m");
     $tmp = "";
     global $wpdb;
