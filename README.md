@@ -99,9 +99,14 @@ wallet.phpを固定ページにテンプレートを当てて以下のサンプ�
 ```
 
 wallet_view.phpを固定ページにテンプレートに当てて以下のソースコードを貼り付ける
+上部はショートコードで平均出費や表を出力する。<canvas>は円グラフのチャートを表示させるためものである
 ```sample2.html
 [sc_useJpy]
 [sc_getAvgEat]
 [sc_form_post]
 [sc_getTable]
+
+<canvas id="mycanvas" height="500px" width="500px"></canvas>
+<ul id="chart_legend"></ul>
+
 ```
