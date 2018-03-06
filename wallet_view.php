@@ -35,6 +35,9 @@ $pixgraphy_settings = pixgraphy_get_theme_options(); ?>
     <script src="<?php bloginfo('template_directory'); ?>/js/bootstrap.js"></script>
     <script src="<?php bloginfo('template_directory'); ?>/js/jquery.bootgrid.js"></script>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js"></script>
+<!--    <script src="--><?php //bloginfo('template_directory'); ?><!--/js/mychart.js"></script>-->
+
     <!--add-->
     <meta charset="<?php bloginfo('charset'); ?>"/>
     <link rel="profile" href="http://gmpg.org/xfn/11"/>
@@ -311,6 +314,8 @@ $pixgraphy_settings = pixgraphy_get_theme_options(); ?>
             </div> <!-- end .container -->
         <?php
         } ?>
+
+
         </div> <!-- end #content -->
         <!-- Footer Start ============================================= -->
         <footer id="colophon" class="site-footer clearfix">
@@ -377,6 +382,10 @@ $pixgraphy_settings = pixgraphy_get_theme_options(); ?>
     });
 </script>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js"></script>
+<script>
+<?php classSum(); ?>
+</script>
 
 <?php wp_footer(); ?>
 </body>

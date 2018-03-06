@@ -285,7 +285,7 @@ function getTable() {
     $results = $wpdb->get_results("SELECT DISTINCT * FROM wp_wallet ORDER BY date DESC");
 
     $tmp .= '<table id="grid-basic" class="table table-condensed table-hover table-striped">';
-    $tmp .= '<thead><tr><th data-column-id="1" data-width="8%">id</th><th data-column-id="2" data-width="15%">日付</th><th data-column-id="3" data-width="30%">品名</th><th data-column-id="4" data-width="30%">場所</th><th data-column-id="5" data-width="10%">分類</th><th data-column-id="6" data-width="7%">円</th></tr></thead>';
+    $tmp .= '<thead><tr><th data-column-id="1" data-width="8ho%">id</th><th data-column-id="2" data-width="15%">日付</th><th data-column-id="3" data-width="30%">品名</th><th data-column-id="4" data-width="30%">場所</th><th data-column-id="5" data-width="10%">分類</th><th data-column-id="6" data-width="7%">円</th></tr></thead>';
     $tmp .= '<tbody>';
     for ($i = 0; $i < count($results); $i++) {
         $tmp .= '<tr>';
@@ -309,24 +309,25 @@ add_shortcode('sc_getTable', 'getTable');
 
 //今月の使用額表示
 function useJpy() {
-    $today = date("Y-m");
+    $today = date_i18n("Y-m");
     print $today;
     $sum_ = "";
     global $wpdb;
-    $results = $wpdb->get_results("SELECT sum(jpy) as gokei FROM wp_wallet WHERE date LIKE '%". $today ."%'");
+    $results = $wpdb->get_results("SELECT sum(jpy) as gokei FROM wp_wallet WHERE date LIKE '%" . $today . "%'");
     for ($i = 0; $i < count($results); $i++) {
         $sum_ = $results[$i]->gokei;
     }
     return "今月の出費:" . $sum_ . "円";
 }
+
 add_shortcode('sc_useJpy', 'useJpy');
 
 //今月の平均食費(日)表示
-function getAvgEat(){
-    $today = date("Y-m");
+function getAvgEat() {
+    $today = date_i18n("Y-m");
     $avg = "";
     global $wpdb;
-    $results = $wpdb->get_results("SELECT SUM(jpy) as avg FROM wp_wallet WHERE `class` = '食費' AND `date`  LIKE '%". $today ."%'");
+    $results = $wpdb->get_results("SELECT SUM(jpy) as avg FROM wp_wallet WHERE `class` = '食費' AND `date`  LIKE '%" . $today . "%'");
     for ($i = 0; $i < count($results); $i++) {
         $avg = $results[$i]->avg;
     }
@@ -339,8 +340,8 @@ function getAvgEat(){
 
     return "今月の平均食費/日:" . $avg . "円<br>今月の予想食費/月:" . $avg * 30 . "円";
 }
-add_shortcode('sc_getAvgEat', 'getAvgEat');
 
+add_shortcode('sc_getAvgEat', 'getAvgEat');
 
 
 //お小遣いテーブル表示
@@ -371,3 +372,43 @@ function getTableLimit() {
 }
 
 add_shortcode('sc_getTableLimit', 'getTableLimit');
+
+function classSum() {
+    $color=array('red','blue','pink','green','black');
+    $today = date_i18n("Y-m");
+    $tmp = "";
+    global $wpdb;
+    $results = $wpdb->get_results("SELECT class,sum(jpy) AS gokei FROM wp_wallet  WHERE `date` LIKE '%" . $today . "%' GROUP BY class");
+//    print "SELECT class,sum(jpy) AS gokei FROM `wp_wallet` GROUP BY class WHERE `date` LIKE '%" . $today . "%'";
+
+    $tmp .= 'var data = [';
+    $tmp .= "\n";
+
+    for ($i = 0; $i < count($results); $i++) {
+//        $tmp .= $results[$i]->gokei;
+        $tmp .= '{';
+        $tmp .= "\n";
+        $tmp .= 'value: ' . $results[$i]->gokei . ',';
+        $tmp .= "\n";
+        $tmp .= 'color: ' . '"' .$color[$i] . '"' . ',' ;
+        $tmp .= "\n";
+        $tmp .= 'highlight: "#FF5A5E",';
+        $tmp .= "\n";
+        $tmp .= 'label: ' . '"' . $results[$i]->class . '"';
+        $tmp .= "\n";
+        $tmp .= '},';
+    }
+    $tmp = substr($tmp,0, -1);
+
+    $tmp .= "\n";
+
+    $tmp .= '];';
+    $tmp .= "\n";
+    $tmp .= 'var myChart = new Chart(document.getElementById("mycanvas").getContext("2d")).Doughnut(data);';
+
+//    後ろから一文字消す
+
+    print $tmp;
+//    return;
+
+}
