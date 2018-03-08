@@ -381,7 +381,7 @@ function classSum() {
     $tmp = "";
     //SQL文発行
     global $wpdb;
-    $results = $wpdb->get_results("SELECT class,sum(jpy) AS gokei FROM wp_wallet  WHERE `date` LIKE '%" . $today . "%' GROUP BY class");
+    $results = $wpdb->get_results("SELECT class,sum(jpy) AS gokei FROM wp_wallet  WHERE `date` LIKE '%" . $today . "%' GROUP BY class ORDER BY gokei");
 
     //jsを$tmpに格納
     $tmp .= 'var data = [';
